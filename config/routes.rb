@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'transfers/index'
+
   resources :deposits
 
   devise_for :users, :controllers => { registrations: 'registrations' }
