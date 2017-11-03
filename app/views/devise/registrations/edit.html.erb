@@ -1,7 +1,21 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<h3>Update <%=current_user.first_name%>'s account details.</h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
+
+  <div class="field">
+    <%=f.label :First_name%>
+    <%=f.text_field :first_name%>
+  </div>
+
+  <div class="field">
+    <%=f.label :Last_name%>
+    <%=f.text_field :last_name%>
+  </div>
+
+  <div class="field">
+    <%=f.label :Phone_Number%>
+    <%=f.text_field :phone_no%>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
