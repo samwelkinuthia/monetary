@@ -1,2 +1,16 @@
-<h1>Deposits#index</h1>
-<p>Find me in app/views/deposits/index.html.erb</p>
+<div class="row">
+  <div class="col-md-12, col-xs -12">
+    <%=form_for @deposit do |f|%>
+      <%= render "shared/errors", object: @deposit%>
+
+      <div class="form-group">
+        <%= f.label :Enter_Amount%>
+        <%= f.text_field :amount, required: true%>
+      </div>
+
+      <div class="form-group">
+        <%=f.button :Submit, class: "btn btn-success"%>
+      </div>
+    <%end%>
+  </div>
+</div>
