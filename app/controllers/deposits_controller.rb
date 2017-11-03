@@ -6,6 +6,7 @@ class DepositsController < ApplicationController
   def create
     @deposit = current_user.deposits.new(deposit_params)
     if @deposit.save
+      @balance = (current_user.balance + @deposit.amount).to_i
       redirect_to dashboard_index_path, notice: "Successfully deposited funds"
     else
       redirect_to dashboard_index_path, notice: "Deposit failed, try again"
