@@ -6,9 +6,10 @@ class DepositsController < ApplicationController
   def create
     @deposit = current_user.deposits.new(deposit_params)
     if @deposit.save
-      redirect_to dashboard_path, notice: "Successfully deposited funds"
+      redirect_to dashboard_index_path, notice: "Successfully deposited funds"
     else
-      redirect_to dashboard_path, notice: "Deposit failed, try again"
+      redirect_to dashboard_index_path, notice: "Deposit failed, try again"
+    end
   end
 
   private
