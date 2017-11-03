@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'transfers/index'
 
   resources :deposits
+  resources :transfers
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   get 'dashboard/index'
