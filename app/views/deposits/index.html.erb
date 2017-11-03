@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-md-12, col-xs -12">
     <%=form_for @deposit do |f|%>
-      <%= render "shared/errors", object: @deposit%>
-
       <div class="form-group">
         <%= f.label :Enter_Amount%>
         <%= f.text_field :amount, required: true%>
