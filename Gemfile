@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'toastr-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 
 group :development, :test do
