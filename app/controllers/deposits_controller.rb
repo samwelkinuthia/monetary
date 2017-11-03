@@ -10,4 +10,10 @@ class DepositsController < ApplicationController
     else
       redirect_to dashboard_path, notice: "Deposit failed, try again"
   end
+
+  private
+
+  def deposit_params
+    params.require(:deposit).permit(:amount)
+  end
 end
