@@ -5,6 +5,10 @@ class RegistrationsController < Devise::RegistrationsController
     dashboard_index_path
   end
 
+  def after_update_path_for(_user)
+    dashboard_index_path
+  end
+
   private
 
   def sign_up_params
