@@ -1,5 +1,11 @@
-<h3>Welcome to your monetary account dashboard</h3>
+<h3>Welcome to your monetary account dashboard.</h3>
 <h4>Current account balance: <%=current_user.balance%></h4>
-
 <br>
-<%=link_to "Deposit", deposits_path%>
+
+<%if current_user.phone_no.present?%>
+  <%=link_to "Deposit", deposits_path%>
+<%else%>
+  <p>Update your profile <%=link_to "Here", edit_user_registration_path%> to be able to deposit.</p>
+<%end%>
+
+<%=link_to "Here", edit_user_registration_path%>
