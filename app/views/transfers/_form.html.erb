@@ -1,0 +1,10 @@
+<%=form_for @transfer do |f|%>
+  <div class="field">
+    <%=f.label :Recipient%>
+    <%=f.text_field :recipient, placeholder: "Enter user email/phone"%>
+  </div>
+  <div class="field">
+    <%=f.label :Amount%>
+    <%=f.text_field :amount, placeholder: "Amount"%>
+  </div>
+<%end%>
