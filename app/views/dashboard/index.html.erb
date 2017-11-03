@@ -4,8 +4,8 @@
 
 <%if current_user.phone_no.present?%>
   <%=link_to "Deposit", deposits_path%>
+  <br>
+  <%=link_to "Transfer money", transfers_path%>
 <%else%>
   <p>Update your profile <%=link_to "Here", edit_user_registration_path%> to be able to deposit.</p>
 <%end%>
-
-<%=link_to "Here", edit_user_registration_path%>
