@@ -1,0 +1,2 @@
+class TransferMailer < ApplicationMailer
+end
