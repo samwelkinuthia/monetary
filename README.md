@@ -1,24 +1,41 @@
-# README
+# Monetary
+A payment platform where users can deposit funds and send money to other users on the platform.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Enjoy! :smile:
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+#### Front-end
 
-* System dependencies
+* Bootstrap framework for mobile responsitivity and awesomeness.
+* CSS3.
+* HTML 5.
+* Google Fonts.
+* Font Awesome Icons.
+* Animate CSS
 
-* Configuration
+#### Back-end
+* Ruby On Rails.
+* PostgreSQL database.
+* WebBrick web server.
+* Active Record.
 
-* Database creation
+### Database relationships
 
-* Database initialization
+The user is the root model.
 
-* How to run the test suite
+A user has many deposits.
 
-* Services (job queues, cache servers, search engines, etc.)
+A deposit belongs to a particular user.
 
-* Deployment instructions
+## Author
 
-* ...
+[Kinuthia Samwel](http://kinuthia.herokuapp.com)
+
+## Known Bugs
+
+None
+
+[![forthebadge](http://forthebadge.com/images/badges/made-with-ruby.svg)](http://forthebadge.com)
+
+&copy; __2017__
