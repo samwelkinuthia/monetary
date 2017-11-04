@@ -1,11 +1,48 @@
-<h3>Welcome to your monetary account dashboard.</h3>
-<h4>Current account balance: <%=current_user.balance%></h4>
+<div class="container dash">
+  <div class="row top">
+    <h3>Welcome to your monetary account dashboard.</h3>
+    <p>Signed in as:
+      <%=current_user.email%></p>
+    <%if current_user.phone_no.nil?%>
+    <h4>Current account balance:<spam class="balance">
+        <%=current_user.balance%></spam>
+    </h4>
+    <p class="animated infinite pulse">Update your profile
+      <%=link_to "Here", edit_user_registration_path%>
+      to be able to deposit.</p>
+    <%end%>
+  </div>
+  <div class="row body_main">
+    <div class="col-md-6 col-xs-12 body1">
+      <%if current_user.phone_no.present?%>
+      <h4>Current account balance: <spam id="balance">
+        <%=current_user.balance%></span></h4>
+      <h4>Name:<%=current_user.first_name%> <%=current_user.last_name%></h4>
+      <h4>Phone: <%=current_user.phone_no%></h4>
+      <h4>Email: <%=current_user.email%></h4>
+      <%end%>
+    </div>
+    <div class="col-md-6 col-xs-12 body2">
+      <%if current_user.phone_no.present?%>
+      <div class="deposit">
+        <%=link_to deposits_path do%>
+        <i class="fa fa-download icon" aria-hidden="true"></i>
+        <p>Deposit</p>
+        <%end%>
+      </div>
+      <div class="send">
+        <%=link_to transfers_path do%>
+        <i class="fa fa-share icon" aria-hidden="true"></i>
+        <p>Transfer</p>
+        <%end%>
+      </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="row foot">
+    <%=link_to destroy_user_session_path, method: :delete do%>
+    <button class="btn btn-danger">Logout</button>
+    <%end%>
+  </div>
+</div>
 <br>
-
-<%if current_user.phone_no.present?%>
-  <%=link_to "Deposit", deposits_path%>
-  <br>
-  <%=link_to "Transfer money", transfers_path%>
-<%else%>
-  <p>Update your profile <%=link_to "Here", edit_user_registration_path%> to be able to deposit.</p>
-<%end%>
