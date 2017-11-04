@@ -1,3 +1,63 @@
-// Place all the styles related to the dashboard controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container{
+  margin-top: 2%;
+}
+.dash{
+  background-color: white;
+  text-align: center;
+  border: 2px solid #f2f2f2;
+  .top{
+    border:1px solid #0066ff;
+    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+    background-color: #0066ff;
+    border-bottom: 2px solid  #0066ff;
+    padding:20px;
+    font-family: 'Open Sans', serif;
+    .balance{
+      color:red;
+    }
+    h3{
+      font-size: 35px;
+      color:white;
+      margin:5px;
+      font-weight: lighter;
+    }
+    p{
+      margin:25px;
+      color:black;
+    }
+  }
+  .body_main{
+    padding:20px;
+  }
+  .body1{
+    margin-top: 10px;
+    padding: 20px;
+    border-right: 1px solid #f2f2f2;
+    font-family: 'Open Sans',serif;
+    #balance{
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #00e600;
+    }
+  }
+  .body2{
+    padding:20px;
+    .icon{
+      font-size: 30px;
+      color: #0066ff;
+    }
+    .deposit{
+      padding:10px;
+    }
+    .send{
+      padding:10px;
+    }
+  }
+  .foot{
+    button{
+      margin:20px;
+    }
+  }
+
+}
