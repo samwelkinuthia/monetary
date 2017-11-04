@@ -1,5 +1,5 @@
 class TransferMailer < ApplicationMailer
-  default from: "monetary@gmail.com"
+  default from: "samwuelkinuthia@gmail.com"
 
   def transfer_email(user, transfer)
     @user = user

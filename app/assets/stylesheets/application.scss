@@ -14,10 +14,17 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400');
+// custom stylesheets
+@import "home";
+@import "registrations";
+@import "transfers";
+@import "dashboard";
+@import "deposits";
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
-
- // custom stylesheets
-
- @import "home";
+body{
+  overflow-x: hidden;
+  background-color:#f2f2f2;
+}

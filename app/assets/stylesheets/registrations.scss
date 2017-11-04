@@ -1,3 +1,33 @@
-// Place all the styles related to the registrations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.register {
+  background-color: white;
+  text-align: center;
+  font-family:'Open Sans', serif;
+  margin:auto;
+  width:50%;
+  margin-top:5%;
+  .head, .tail{
+    height:100%;
+    padding:10px;
+    background-color:  #0066ff;
+    color:white;
+    a{
+      color:white;
+    }
+  }
+}
+
+.form {
+  padding-top:20px;
+  padding-bottom: 20px;
+  margin:auto;
+  label{
+    color:blue;
+  }
+  .form-control{
+    width:50%;
+    margin:auto;
+  }
+  .btn-primary{
+    margin: 10px;
+  }
+}

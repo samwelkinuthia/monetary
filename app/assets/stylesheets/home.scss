@@ -1,4 +1,47 @@
- .row{
-   padding:100px;
-   text-align: center;
- }
+.main {
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('site.jpeg')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-filter: contrast(90%);
+  .content{
+    h1{
+      font-size:72px;
+      margin-top:10%;
+      color:white;
+      font-family: 'Open Sans', serif;
+      font-weight: lighter;
+      letter-spacing: 2px;
+    }
+    h3{
+      font-size:20px;
+      color:white;
+      font-family: 'Open Sans', serif;
+    }
+    .get_started{
+      padding:15px;
+      margin-top:20px;
+      font-family: 'Open Sans', serif;
+      color:white;
+      background:  #0066ff;
+      border:0px solid blue;
+      transition: .4s;
+    }
+    .get_started:hover{
+      background: #1a75ff;
+      transition: .4s;
+    }
+    p{
+      margin-top: 10px;
+      color:white;
+      font-family:'Open Sans', serif;
+      font-size: 14px;
+      a{
+        color:yellow;
+      }
+    }
+  }
+}
