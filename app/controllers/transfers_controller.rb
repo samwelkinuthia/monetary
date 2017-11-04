@@ -16,6 +16,7 @@ class TransfersController < ApplicationController
       current_user.update(balance: rem_balance)
       recipient_balance = @receiver.balance.to_i + @transfer.amount.to_i
       @receiver.update(balance: recipient_balance)
+      TransferMailer.transfer_success(current_user, @transfer).deliver
       redirect_to dashboard_index_path, notice: 'Transfer successful'
     else
       redirect_to transfers_path, alert: 'Failed. Is the user in this system? Is account balance enough?'
