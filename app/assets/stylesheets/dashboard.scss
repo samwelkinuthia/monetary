@@ -4,7 +4,6 @@
 .dash{
   background-color: white;
   text-align: center;
-  border: 2px solid #f2f2f2;
   .top{
     border:1px solid #0066ff;
     border-top-right-radius:10px;
@@ -28,6 +27,7 @@
     }
   }
   .body_main{
+    border: 2px solid #f2f2f2;
     padding:20px;
   }
   .body1{
