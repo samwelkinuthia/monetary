@@ -4,6 +4,6 @@ class TransferMailer < ApplicationMailer
   def transfer_email(user, transfer)
     @user = user
     @transfer = transfer
-    mail to: user.email, subjectL "Transfer confirmed"
+    mail to: user.email, subject: "Transfer confirmed"
   end
 end
