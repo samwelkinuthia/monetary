@@ -1,14 +1,19 @@
-<div class="row">
-  <div class="col-md-12, col-xs -12">
-    <%=form_for @deposit do |f|%>
+<div class="row register">
+  <div class="col-md-12, col-xs-12">
+    <div class="head">
+      <h2>Deposit money</h2>
+    </div>
+    <div class="form">
+      <%=form_for @deposit do |f|%>
       <div class="form-group">
         <%= f.label :Enter_Amount%>
-        <%= f.text_field :amount, required: true%>
+        <%= f.text_field :amount, required: true, class:"form-control"%>
       </div>
 
       <div class="form-group">
-        <%=f.button :Submit, class: "btn btn-success"%>
+        <%=f.button :Submit, class: "btn btn-success"%>  <%=link_to "Cancel", dashboard_index_path, class:"btn btn-danger"%>
       </div>
-    <%end%>
+      <%end%>
+    </div>
   </div>
 </div>
