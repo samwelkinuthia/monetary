@@ -1,5 +1,5 @@
-class TransferMailer < ApplicationMailer
-  default from: "samwuelkinuthia@gmail.com"
+class TransferMailer < ActionMailer::Base
+  default from: "monetary.herokuapp.com"
 
   def transfer_email(user, transfer)
     @user = user
